@@ -31,11 +31,11 @@ namespace instagram_Bot
             userName.SendKeys(textBox1.Text);
             password.SendKeys(textBox2.Text);
             loginBtn.Click();
-            Console.WriteLine("Hesap Bilgileri Girildi!");
+            Console.WriteLine("Logged");
             Thread.Sleep(2500);
 
             driver.Navigate().GoToUrl($"https://www.instagram.com/{textBox1.Text}");
-            Console.WriteLine("Profile Yönlendirildi!");
+            Console.WriteLine("Found the profile");
             Thread.Sleep(2500);
 
             IWebElement followerLink = driver.FindElement(By.CssSelector("#react-root > section > main > div > header > section > ul > li:nth-child(2) > a"));
